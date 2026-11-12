@@ -1,0 +1,124 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>올블랙 리프팅 · 11/19 모션 카드뉴스 (한국)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{background:#fafafa;font-family:Pretendard,-apple-system,sans-serif;color:#111}
+.wrap{max-width:480px;margin:0 auto;background:#fff;min-height:100vh;border-left:1px solid #eee;border-right:1px solid #eee}
+.rep{padding:18px 16px 10px;border-bottom:1px solid #efefef}
+.rep h1{font-size:17px;font-weight:800;letter-spacing:-.4px}.rep p{font-size:12.5px;color:#737373;margin-top:4px;line-height:1.5}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:12px 16px;border-bottom:1px solid #efefef;scrollbar-width:none}
+.tabs button{flex:none;border:1px solid #dbdbdb;background:#fff;border-radius:99px;padding:8px 14px;font:600 13px Pretendard;cursor:pointer}
+.tabs button.on{background:#111;color:#fff;border-color:#111}
+.prof{display:flex;align-items:center;gap:18px;padding:18px 16px 8px}
+.av{width:78px;height:78px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);flex:none}
+.av div{width:100%;height:100%;border-radius:50%;border:3px solid #fff;background:#F0EEE9;display:flex;align-items:center;justify-content:center;font:800 20px Pretendard;color:#2F5BEA}
+.un{font-size:17px;font-weight:700}.st{display:flex;gap:18px;margin-top:8px;font-size:13px}.st b{font-weight:700}
+.bio{padding:4px 16px 12px;font-size:13px;line-height:1.5}.bio span{color:#737373}
+.gtabs{display:flex;border-top:1px solid #efefef}.gtabs div{flex:1;text-align:center;padding:12px 0;font-size:12px;font-weight:700;letter-spacing:1px;color:#737373}.gtabs .on{color:#111;border-top:1px solid #111;margin-top:-1px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.tile{position:relative;aspect-ratio:3/4;overflow:hidden;cursor:pointer;background:#eee}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile svg{position:absolute;right:8px;top:8px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+.hint{padding:14px 16px 28px;font-size:12px;color:#8e8e8e;text-align:center}
+/* post */
+.post{position:fixed;inset:0;background:#fff;z-index:10;display:none;overflow-y:auto}
+.post.open{display:block}
+.pin{max-width:480px;margin:0 auto}
+.ph{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid #efefef;position:sticky;top:0;background:#fff;z-index:2}
+.ph .sav{width:32px;height:32px;border-radius:50%;background:#F0EEE9;display:flex;align-items:center;justify-content:center;font:800 11px Pretendard;color:#2F5BEA;border:1px solid #eee}
+.ph b{font-size:14px}.ph small{display:block;font-size:11.5px;color:#737373}
+.x{margin-left:auto;border:0;background:none;font-size:26px;line-height:1;cursor:pointer;padding:4px 8px}
+.media{position:relative}
+.car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:4/5;background:#000}
+.car::-webkit-scrollbar{display:none}
+.car video{flex:none;width:100%;height:100%;object-fit:cover;scroll-snap-align:center;display:block}
+.cnt{position:absolute;right:12px;top:12px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:600;padding:4px 9px;border-radius:99px}
+.snd{position:absolute;right:12px;bottom:12px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:14px;cursor:pointer}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.85);font-size:16px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.nav.l{left:10px}.nav.r{right:10px}
+.dots{display:flex;justify-content:center;gap:4px;padding:10px 0 4px}.dots i{width:6px;height:6px;border-radius:50%;background:#c7c7c7}.dots i.on{background:#0095f6}
+.acts{display:flex;gap:14px;padding:4px 14px 6px;font-size:22px}
+.cap{padding:2px 14px 30px;font-size:13.5px;line-height:1.55;white-space:pre-wrap;word-break:break-word}.cap b{font-weight:700}
+@media(hover:none) and (max-width:899px){.nav{display:none}}
+@media(min-width:900px){
+ html,body{background:#fff}
+ .wrap{max-width:1100px;border:0}
+ .rep{padding:34px 40px 18px;text-align:center}.rep h1{font-size:26px}.rep p{font-size:14.5px}
+ .tabs{justify-content:center;padding:16px 40px}.tabs button{font-size:15px;padding:10px 22px}
+ .prof{max-width:935px;margin:0 auto;gap:80px;padding:40px 60px 10px}
+ .av{width:150px;height:150px}.av div{font-size:38px;border-width:5px}
+ .un{font-size:22px}.st{font-size:16px;gap:34px;margin-top:18px}
+ .bio{max-width:935px;margin:0 auto;padding:0 60px 34px 290px;font-size:15px}
+ .gtabs{max-width:935px;margin:0 auto}
+ .grid{max-width:935px;margin:0 auto;gap:4px}
+ .hint{font-size:14px}
+ .post{background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:30px}
+ .post.open{display:flex}
+ .pin{max-width:none;width:auto;height:min(88vh,1000px);display:grid;grid-template-columns:auto 400px;grid-template-rows:auto 1fr auto auto;background:#fff;border-radius:6px;overflow:hidden}
+ .ph{grid-column:2;grid-row:1;position:static}
+ .media{grid-column:1;grid-row:1/5;height:min(88vh,1000px);aspect-ratio:4/5}
+ .car{height:100%;aspect-ratio:auto}
+ .cap{grid-column:2;grid-row:2;overflow-y:auto;padding:16px 18px;font-size:14.5px}
+ .dots{grid-column:2;grid-row:3;justify-content:flex-start;padding:10px 18px 0}
+ .acts{grid-column:2;grid-row:4;padding:10px 18px 18px;border-top:1px solid #efefef}
+ .nav{display:block!important;width:36px;height:36px;font-size:20px}
+ .x{position:fixed;right:26px;top:14px;color:#fff;font-size:40px}
+}
+
+.sec{padding:22px 16px 0}.sec h2{font-size:15px;margin:0 0 10px;letter-spacing:-.01em}.sec h3{font-size:13.5px;margin:16px 0 6px}
+.ct{width:100%;border-collapse:collapse;font-size:13px;line-height:1.5}.ct th,.ct td{border-top:1px solid #e6e6ea;padding:8px 6px;text-align:left;vertical-align:top}
+.ct th{white-space:nowrap;color:#666;font-weight:600;width:48px}.ct small{display:block;color:#888}
+.kv{width:100%;border-collapse:collapse;font-size:13px;line-height:1.5}.kv th,.kv td{border-top:1px solid #e6e6ea;padding:8px 6px;text-align:left;vertical-align:top}.kv th{white-space:nowrap;color:#666;font-weight:600;width:84px}
+.badge{display:inline-block;font-size:11px;padding:3px 9px;border-radius:99px;background:#ff3e9e;color:#fff;margin-left:6px;vertical-align:2px}
+.note{font-size:12px;color:#777;line-height:1.6;margin-top:10px}.path{font:12px ui-monospace,Consolas,monospace;background:#f4f4f6;padding:8px 10px;border-radius:8px;word-break:break-all}
+.lk{display:inline-block;margin:10px 0 0;font-size:12.5px;padding:7px 12px;border:1px solid #ddd;border-radius:8px;color:#111;text-decoration:none}
+.foot{height:40px}
+@media(min-width:900px){.sec{max-width:935px;margin:0 auto;padding:30px 0 0}}
+</style></head>
+<body><div class="wrap">
+<div class="rep"><h1>올블랙 리프팅 · 11/19 모션 카드뉴스 (한국)</h1><p>게시물을 누르면 인스타처럼 옆으로 넘겨 볼 수 있어요. 세트마다 15초 영상 5장(1장 = 승인 썸네일). 울쎄라피 프라임 '한 대 더' + BLACK XERF DAY · 금액·할인율 표기 없음.</p><a class="lk" href="../">← 썸네일 7개 언어 페이지</a></div>
+<div class="prof"><div class="av"><div>BB</div></div><div><div class="un">beautyblossom_clinic</div><div class="st"><div><b>3</b> 게시물</div><div><b>올블랙</b> 리프팅</div></div></div></div>
+<div class="bio"><b>뷰티블라썸의원 · Beauty Blossom Clinic</b><br><span>@beautyblossom_clinic · 서울 합정역 3번 출구</span></div>
+<div class="gtabs"><div class="on">▦ 게시물</div><div>▶ 릴스</div><div>☺ 태그됨</div></div>
+<div class="grid" id="grid"></div>
+<div class="hint">왼쪽부터 1세트 · 2세트 · 3세트 (업로드는 3 → 2 → 1 순서) · 프로필에서는 3:4로 잘려 보여요</div>
+<div class="sec"><h2>장별 구성 <span class="badge">한국어 · 확인 요청</span></h2><h3>1세트 · 올블랙 드레스코드</h3><table class="ct"><tr><th>1장</th><td><b>승인 썸네일 그대로 움직임</b><small>0초 = 승인 포스터 · 호기심 간극</small><small>OP 83 히트스톱(3D 단어 착지 범프) · 87 플래시 1회 · 117 깊이 2.5D · 93 콜로라마 와이프 · 138 랙 포커스 · FX 38·45·36</small></td></tr><tr><th>2장</th><td><b>The Invitation · 11월 드레스코드는 [올블랙] / 이번 달 리프팅은 두 벌로 준비했어요 · LOOK 01 울쎄라피 프라임 한 대 더 11.09–12.31 · LOOK 02 BLACK XERF DAY 혜택 한 번 더 11.01–11.30 / 11월호 커버는 올블랙 리프팅</b><small>호기심 간극</small><small>OP 78 초대장 3D 틸트 · 49 공유 지오메트리 · 140 타일 뒤집기(주의, S1 1회) · 87 플래시 컷 · 73 매거진 커버 매트 성장 · FX 01·38·V22·45 · 영상 L1 클립</small></td></tr><tr><th>3장</th><td><b>LOOK 01 · 울쎄라피 프라임, [한 대 더] / 추가 도입 기념, 프라임 포함 시술이면 추가 혜택 · 11.09–12.31 / 더 여유롭게 만나는 프리미엄 리프팅</b><small>가용성</small><small>OP 83 히트스톱(두 번째 장비 착지) · 60 펀치인+스매시팬 · 149 기간 눈금자 · 124 선 접힘 이음새 · 75 히어로 무대 · FX 38·V30·41·45</small></td></tr><tr><th>4장</th><td><b>LOOK 02 · BLACK XERF DAY · 11.01–11.30 블랙 프라이데이 특별 혜택 / 뜨거운 성원에 힘입어, 혜택 [한 번 더]! · 세르프 포함 시술 시 추가 혜택 / BLACK XERF DAY 11.30까지</b><small>사회적 증거 + 긴급성</small><small>OP 116 고보 스포트 · 50 글리프 마스크 · 92 리스트 롤 착지 + 0.2초 '!' 팝 · 56 플러드&amp;컨트랙트 · 138 랙 포커스 · FX 38·46·45·V22</small></td></tr><tr><th>5장</th><td><b>Runway · 드레스코드 맞추러 와요 / 합정역 3번 출구 바로 앞 · 접수 6층 · 평일 20시까지 · 점심시간 없이 / My skin. My moment.</b><small>진입 장벽 낮추기 · 피크엔드</small><small>OP 111 3D 캐러셀 바닥반사 · 57 무한 줌 · 145 오시는 길 · 123 단일 도형 체인 · 134 로고 엠보스 배지 · FX 08·38·45·V44 · 영상 L2 런웨이 클립 · 드로잉 지도</small></td></tr></table><h3>2세트 · 프라임 매칭</h3><table class="ct"><tr><th>1장</th><td><b>승인 썸네일 그대로 움직임</b><small>0초 = 승인 포스터 · 호기심 간극</small><small>OP 83 히트스톱(3D 단어 착지 범프) · 87 플래시 1회 · 117 깊이 2.5D · 93 콜로라마 와이프 · 138 랙 포커스 · FX 38·45·36</small></td></tr><tr><th>2장</th><td><b>Prime Profile · 짝 찾기 전에, 프라임 프로필[.] / 피부 속을 보면서 · 깊이를 나눠서 1.5 · 3.0 · 4.5mm / 보면서, 깊이를 골라요 (콤프카드)</b><small>권위·구체성</small><small>OP 126 마침표 모티프 · 123 단일 도형 체인(마침표 → 초점) · 101 시뮬레이션 모식도(Blender 피부) · 106 페이퍼 맵→벤토 · 76 아이들 부유+접지 그림자 · FX 38·V24·45·V09 · 드로잉 콤프카드 주석</small></td></tr><tr><th>3장</th><td><b>Matching Rule · 짝 조건은 딱 하나 / 에너지가 달라야 해요 · 프라임 집속 초음파 ↔ 온다 마이크로웨이브 · 써마지 고주파(RF) · 소프웨이브 평행 초음파 / 후보는 셋</b><small>대비 효과</small><small>OP 139 필드 타이포 · 54 아이리스(카메라 조리개) · 114 아크 카드 · 127 전경 전환 · 132 단일 히어로 점화 · FX 38·45·V09·08 · 드로잉 파형</small></td></tr><tr><th>4장</th><td><b>Matching Result · 매칭 결과 발표합니다 / 프라임+온다 = 프라임온쎄라 · 프라임+써마지 = 프라임울써마지 · 프라임+소프웨이브 = 프라임소프쎄라 / 어떤 짝이 맞을지는 상담에서 정해요</b><small>자이가르닉 해소</small><small>OP 58 타이포 건축 · 155 롤+역회전 · 92 리스트 롤 착지 · 49 공유 지오메트리 · 142 필름스트립 스탬프(주의, S2 1회) · FX 30·45·38·V15</small></td></tr><tr><th>5장</th><td><b>Your Match? · 당신의 짝은? (글자가 모델 뒤로) / SPECIAL GIFT 울쎄라 겔마스크팩 증정 · 울쎄라피 프라임 600샷 이상 시술 시 · 재고 소진 시 조기 마감 / 12.31까지, 프라임 매칭 중</b><small>상호성 · 피크엔드</small><small>OP 69 그린스크린 키잉 루프 · 56 플러드 · 129 디테일 릴레이 · 124 선 접힘 · 117 깊이 2.5D · FX 38·45·V15·V44 · 영상 L3 그린스크린 클립</small></td></tr></table><h3>3세트 · BLACK XERF DAY</h3><table class="ct"><tr><th>1장</th><td><b>승인 썸네일 그대로 움직임</b><small>0초 = 승인 포스터 · 호기심 간극</small><small>OP 83 히트스톱(3D 단어 착지 범프) · 87 플래시 1회 · 117 깊이 2.5D · 93 콜로라마 와이프 · 138 랙 포커스 · FX 38·45·36</small></td></tr><tr><th>2장</th><td><b>Two Frequencies · 세르프는 주파수가 두 개 / 6.78MHz 얕은 층의 결 · 2MHz 더 깊은 층까지 · Shallow · Middle · Deep / 하나의 장비로, 깊이는 세 칸</b><small>지식의 저주 해소</small><small>OP 159 사이매틱(주의, S3 1회) · 57 무한 줌 · 101 시뮬레이션 모식도(Blender 피부 RF) · 123 단일 도형 체인 · 138 랙 포커스 · FX 38·45·V09·V22</small></td></tr><tr><th>3장</th><td><b>Size Guide · 세르프도 사이즈가 있어요 (S·M·L·XL 태그) / 05 5×10mm 좁고 얇은 부위 · 10 10×10mm 눈가·입가 · 40 20×20mm 얼굴 전체 · 60 20×30mm 넓고 두꺼운 부위 / 부위 따라 갈아 끼워요 · 스파이더 패턴 전극</b><small>맞춤</small><small>OP 143 다이컷 태그 안착 · 106 페이퍼 맵→벤토 · 156 3면도 패널(실제 정면 렌더+선도) · 60 펀치인+스매시팬 · 76 부유+접지 그림자 · FX 28·38·45·V09 · 드로잉 치수선</small></td></tr><tr><th>4장</th><td><b>Easy Schedule · 바쁜 11월에도 끼워 넣기 좋은 이유 / 마취 없이 바로(ICD 쿨링 + Wave Fit Pulse) · 15~30분(샷 수에 따라) · 당일 세안·메이크업 · 식약처·미국 FDA 허가 / 11월 일정표에 세르프 한 칸</b><small>마찰 줄이기 + 권위</small><small>OP 51 인쇄 미스레지(쾅 1회) · 54 아이리스 · 150 조립 스텝 · 155 롤+역회전 · 132 단일 히어로 점화 · FX V20·V46·38·45 · 드로잉 일정표</small></td></tr><tr><th>5장</th><td><b>BLACK XERF DAY · 뜨거운 성원에 힘입어, 혜택 한 번 더 / 세르프, 11월이 [제철] · 11.30까지</b><small>긴급성 · 피크엔드</small><small>OP 62 비트 MV 컷 · 87 플래시 컷 · 130 단어 점등 · 50 글리프 마스크 · 75 히어로 무대 · FX 38·41·45·V22 · 영상 L4 클립</small></td></tr></table>
+<div class="note">[ ] 안은 핑크 3D 글자예요. 기법 번호는 모션 스택 기법 사전(09_TECHNIQUES) 기준이고, 금지 기법(07·11·27·33·63·64·94·110·커서 UI)은 쓰지 않았어요. 모델은 모델7 한 명, 장마다 다른 룩입니다.</div></div>
+<div class="sec"><h2>음악 · 효과음</h2><table class="kv">
+<tr><th>A · 썸네일·3·5장</th><td>Double Life (BGM 다이어리 · 치정·불륜 06) · 원곡 128 BPM 그대로</td></tr>
+<tr><th>B · 2·4장</th><td>Digital Focus (BGM 다이어리 · IT·AI 03) · 117 → 128 BPM으로 맞춤</td></tr>
+<tr><th>효과음</th><td>장면 전환·착지·점등에 맞춘 효과음 장마다 17~24개</td></tr></table></div>
+<div class="sec"><h2>검수 결과</h2><table class="kv">
+<tr><th>규격</th><td>15/15 통과 · 1080×1350 · 30fps · 450프레임 · 15초 · 오디오 15초</td></tr>
+<tr><th>루프</th><td>첫 프레임과 마지막 프레임 평균 차이 0.72~2.03 (0~255 기준, 이어 붙여도 끊김이 거의 보이지 않는 수준)</td></tr>
+<tr><th>결정성</th><td>같은 시각 두 번 렌더 12/12 동일</td></tr>
+<tr><th>문구</th><td>가격·할인·만원·%·'전문의' 0건 (영상·캡션) · 숫자 2개 이상은 정지 표시</td></tr>
+<tr><th>음량</th><td>−15.4~−15.3 LUFS</td></tr></table></div>
+<div class="sec"><h2>원본 위치</h2><div class="path">G:\내 드라이브\모션그래픽 카드뉴스\출력\2026-11-19_올블랙리프팅_KO</div>
+<div class="note">세트 폴더마다 00_커버.png · 01_썸네일.mp4 · 02~05_본문.mp4 · caption.txt, 맨 위에 그리드_커버.png</div></div>
+<div class="foot"></div>
+</div>
+<div class="post" id="post"><div class="pin">
+ <div class="ph"><div class="sav">BB</div><div><b>beautyblossom_clinic</b><small id="pt"></small></div><button class="x" id="x" aria-label="닫기">×</button></div>
+ <div class="media"><div class="car" id="car"></div><div class="cnt" id="cnt">1/5</div><button class="snd" id="snd" aria-label="소리">🔇</button><button class="nav l" id="pl">‹</button><button class="nav r" id="pr">›</button></div>
+ <div class="dots" id="dots"></div>
+ <div class="acts">♡ &nbsp;💬 &nbsp;➤</div>
+ <div class="cap" id="cap"></div>
+</div></div>
+<script>
+var D=[{"cover": "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/cover_s1.jpg", "vids": ["https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_1.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_2.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_3.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_4.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_5.mp4"], "posters": ["https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_1.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_2.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_3.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_4.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s1_5.jpg"], "cap": "홍대 리프팅 이벤트, 울쎄라피 프라임 한 대 더 · BLACK XERF DAY | 합정 뷰티블라썸의원\n\n11월 드레스코드는 올블랙 리프팅이에요 🖤\n이번 달 리프팅은 두 벌로 준비했어요.\n\nLOOK 01 울쎄라피 프라임, 한 대 더 (11.09 – 12.31)\n추가 도입 기념, 울쎄라피 프라임 포함 시술 시 추가 혜택\n더 여유롭게 만나는 프리미엄 리프팅\n\nLOOK 02 BLACK XERF DAY (11.01 – 11.30)\n뜨거운 성원에 힘입어, 세르프 포함 시술 시 혜택 한 번 더\n\n나한테 맞는 시술은 피부 상태를 보고 상담에서 같이 정해요.\n※ 각 이벤트는 다른 이벤트·프로모션과 중복 적용되지 않아요.\n※ 모델 사진·영상은 연출 이미지예요.\n\n📍 합정역 3번 출구 바로 앞 · 접수 6층\n☎ 02-336-7511 · 평일 10–20시 · 주말 10–16:30 · 점심시간 없이\n🔗 https://beautyblossom.kr/promotion\n\n#홍대피부과 #합정피부과 #홍대리프팅 #울쎄라피프라임 #세르프"}, {"cover": "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/cover_s2.jpg", "vids": ["https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_1.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_2.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_3.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_4.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_5.mp4"], "posters": ["https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_1.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_2.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_3.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_4.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s2_5.jpg"], "cap": "홍대 울쎄라피 프라임 짝꿍 조합, 온다·써마지·소프웨이브 | 합정 뷰티블라썸의원\n\n프라임의 짝을 찾습니다.\n짝 조건은 딱 하나, 에너지가 달라야 해요.\n\n울쎄라피 프라임 — 집속 초음파. DeepSEE 초음파 영상으로 피부 속을 보면서 1.5 · 3.0 · 4.5mm 깊이를 나눠요\n온다 — 마이크로웨이브 · 써마지 — 고주파(RF) · 소프웨이브 — 평행 초음파\n\n매칭 결과\n프라임온쎄라 = 울쎄라피 프라임 + 온다\n프라임울써마지 = 울쎄라피 프라임 + 써마지\n프라임소프쎄라 = 소프웨이브 + 울쎄라피 프라임\n\n어떤 짝이 맞을지는 얼굴 구조와 피부 상태를 보고 상담에서 정해요.\n\nSPECIAL GIFT 울쎄라피 프라임 600샷 이상 시술 시 울쎄라 겔마스크팩 증정 (재고 소진 시 조기 마감)\n울쎄라피 프라임, 한 대 더 · 11.09 – 12.31\n※ 모델 사진·영상은 연출 이미지예요.\n\n📍 합정역 3번 출구 바로 앞 · 접수 6층\n☎ 02-336-7511\n🔗 https://beautyblossom.kr/40\n\n#홍대울쎄라 #합정피부과 #울쎄라피프라임 #써마지 #소프웨이브"}, {"cover": "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/cover_s3.jpg", "vids": ["https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_1.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_2.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_3.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_4.mp4", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_5.mp4"], "posters": ["https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_1.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_2.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_3.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_4.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/black-lifting-2026-11/motion-ko/s3_5.jpg"], "cap": "홍대 세르프(XERF) BLACK XERF DAY, 11월 한정 혜택 | 합정 뷰티블라썸의원\n\n세르프, 11월이 제철이에요 🖤\n뜨거운 성원에 힘입어, 혜택 한 번 더! (11.01 – 11.30)\n\n· 6.78MHz + 2MHz 두 주파수, Shallow·Middle·Deep 3단계 깊이\n· 이펙터 4종(05·10·40·60), 시술 부위의 면적과 굴곡에 맞춰 선택\n· ICD 쿨링 + Wave Fit Pulse로 별도 마취 없이 시술할 수 있도록 설계\n· 시술 시간은 샷 수에 따라 15~30분 내외\n· 시술 직후 일상생활, 당일 세안·메이크업 가능\n· 식약처 허가 · 미국 FDA 허가\n\n세르프 포함 시술 시 추가 혜택이 있어요. 자세한 조건은 상담 때 안내해 드려요.\n※ 다른 이벤트와 중복 적용되지 않아요.\n※ 모델 사진·영상은 연출 이미지예요.\n\n📍 합정역 3번 출구 바로 앞 · 접수 6층\n☎ 02-336-7511\n🔗 https://beautyblossom.kr/155\n\n#홍대세르프 #합정피부과 #세르프 #XERF #블랙프라이데이"}];
+var TT=["올블랙 드레스코드", "프라임 매칭", "BLACK XERF DAY"];
+var muted=true,idx=0;
+function $(i){return document.getElementById(i)}
+function grid(){var h='';D.forEach(function(s,i){h+='<div class="tile" data-i="'+i+'"><img src="'+s.cover+'" alt="'+TT[i]+'" loading="lazy"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="6" y="2" width="15" height="15" rx="3" fill="none" stroke="#fff" stroke-width="2"/><path d="M3 7v12a2 2 0 002 2h12" fill="none" stroke="#fff" stroke-width="2"/></svg></div>'});$('grid').innerHTML=h;[].forEach.call($('grid').children,function(t){t.onclick=function(){open(+t.dataset.i)}})}
+function open(i){var s=D[i];$('pt').textContent='한국 · '+(i+1)+'세트 '+TT[i];var h='';s.vids.forEach(function(v,k){h+='<video src="'+v+'" poster="'+s.posters[k]+'" playsinline loop preload="'+(k<2?'auto':'metadata')+'" '+(muted?'muted':'')+'></video>'});$('car').innerHTML=h;$('car').scrollLeft=0;$('cap').innerHTML='<b>beautyblossom_clinic</b> '+s.cap;var dh='';for(var k=0;k<5;k++)dh+='<i></i>';$('dots').innerHTML=dh;$('post').classList.add('open');document.body.style.overflow='hidden';idx=-1;setTimeout(sync,50)}
+function close(){[].forEach.call($('car').querySelectorAll('video'),function(v){v.pause()});$('car').innerHTML='';$('post').classList.remove('open');document.body.style.overflow=''}
+function sync(){var c=$('car');var k=Math.round(c.scrollLeft/c.clientWidth);if(k===idx)return;idx=k;$('cnt').textContent=(k+1)+'/5';[].forEach.call($('dots').children,function(e,j){e.className=j==k?'on':''});[].forEach.call(c.querySelectorAll('video'),function(v,j){if(j==k){v.muted=muted;v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})}
+$('car').addEventListener('scroll',function(){clearTimeout(window.__st);window.__st=setTimeout(sync,80)});
+$('pl').onclick=function(){var c=$('car');c.scrollTo({left:Math.max(0,idx-1)*c.clientWidth,behavior:'smooth'})};
+$('pr').onclick=function(){var c=$('car');c.scrollTo({left:Math.min(4,idx+1)*c.clientWidth,behavior:'smooth'})};
+$('snd').onclick=function(){muted=!muted;this.textContent=muted?'🔇':'🔊';[].forEach.call($('car').querySelectorAll('video'),function(v,j){v.muted=muted;if(j==idx&&!muted)v.play()})};
+$('x').onclick=close;$('post').addEventListener('click',function(e){if(e.target===this)close()});document.addEventListener('keydown',function(e){if(!$('post').classList.contains('open'))return;if(e.key=='Escape')close();if(e.key=='ArrowRight')$('pr').click();if(e.key=='ArrowLeft')$('pl').click()});
+grid();
+</script></body></html>
