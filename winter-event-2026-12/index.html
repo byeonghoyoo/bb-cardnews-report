@@ -1,0 +1,114 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>겨울 이벤트 · 12/3 카드뉴스 썸네일 A/B 비교</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{background:#fafafa;font-family:Pretendard,-apple-system,sans-serif;color:#111}
+.wrap{max-width:480px;margin:0 auto;background:#fff;min-height:100vh;border-left:1px solid #eee;border-right:1px solid #eee}
+.rep{padding:18px 16px 10px;border-bottom:1px solid #efefef}
+.rep h1{font-size:17px;font-weight:800;letter-spacing:-.4px}.rep p{font-size:12.5px;color:#737373;margin-top:4px;line-height:1.5}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:12px 16px;border-bottom:1px solid #efefef;scrollbar-width:none}
+.tabs button{flex:none;border:1px solid #dbdbdb;background:#fff;border-radius:99px;padding:8px 14px;font:600 13px Pretendard;cursor:pointer}
+.tabs button.on{background:#111;color:#fff;border-color:#111}
+.prof{display:flex;align-items:center;gap:18px;padding:18px 16px 8px}
+.av{width:78px;height:78px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);flex:none}
+.av div{width:100%;height:100%;border-radius:50%;border:3px solid #fff;background:#F0EEE9;display:flex;align-items:center;justify-content:center;font:800 20px Pretendard;color:#2F5BEA}
+.un{font-size:17px;font-weight:700}.st{display:flex;gap:18px;margin-top:8px;font-size:13px}.st b{font-weight:700}
+.bio{padding:4px 16px 12px;font-size:13px;line-height:1.5}.bio span{color:#737373}
+.gtabs{display:flex;border-top:1px solid #efefef}.gtabs div{flex:1;text-align:center;padding:12px 0;font-size:12px;font-weight:700;letter-spacing:1px;color:#737373}.gtabs .on{color:#111;border-top:1px solid #111;margin-top:-1px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.tile{position:relative;aspect-ratio:3/4;overflow:hidden;cursor:pointer;background:#eee}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile svg{position:absolute;right:8px;top:8px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+.hint{padding:14px 16px 28px;font-size:12px;color:#8e8e8e;text-align:center}
+/* post */
+.post{position:fixed;inset:0;background:#fff;z-index:10;display:none;overflow-y:auto}
+.post.open{display:block}
+.pin{max-width:480px;margin:0 auto}
+.ph{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid #efefef;position:sticky;top:0;background:#fff;z-index:2}
+.ph .sav{width:32px;height:32px;border-radius:50%;background:#F0EEE9;display:flex;align-items:center;justify-content:center;font:800 11px Pretendard;color:#2F5BEA;border:1px solid #eee}
+.ph b{font-size:14px}.ph small{display:block;font-size:11.5px;color:#737373}
+.x{margin-left:auto;border:0;background:none;font-size:26px;line-height:1;cursor:pointer;padding:4px 8px}
+.media{position:relative}
+.car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:3/4;background:#000}
+.car::-webkit-scrollbar{display:none}
+.car video{flex:none;width:100%;height:100%;object-fit:cover;scroll-snap-align:center;display:block}
+.cnt{position:absolute;right:12px;top:12px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:600;padding:4px 9px;border-radius:99px}
+.snd{position:absolute;right:12px;bottom:12px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:14px;cursor:pointer}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.85);font-size:16px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.nav.l{left:10px}.nav.r{right:10px}
+.dots{display:flex;justify-content:center;gap:4px;padding:10px 0 4px}.dots i{width:6px;height:6px;border-radius:50%;background:#c7c7c7}.dots i.on{background:#0095f6}
+.acts{display:flex;gap:14px;padding:4px 14px 6px;font-size:22px}
+.cap{padding:2px 14px 30px;font-size:13.5px;line-height:1.55;white-space:pre-wrap;word-break:break-word}.cap b{font-weight:700}
+@media(hover:none) and (max-width:899px){.nav{display:none}}
+@media(min-width:900px){
+ html,body{background:#fff}
+ .wrap{max-width:1100px;border:0}
+ .rep{padding:34px 40px 18px;text-align:center}.rep h1{font-size:26px}.rep p{font-size:14.5px}
+ .tabs{justify-content:center;padding:16px 40px}.tabs button{font-size:15px;padding:10px 22px}
+ .prof{max-width:935px;margin:0 auto;gap:80px;padding:40px 60px 10px}
+ .av{width:150px;height:150px}.av div{font-size:38px;border-width:5px}
+ .un{font-size:22px}.st{font-size:16px;gap:34px;margin-top:18px}
+ .bio{max-width:935px;margin:0 auto;padding:0 60px 34px 290px;font-size:15px}
+ .gtabs{max-width:935px;margin:0 auto}
+ .grid{max-width:935px;margin:0 auto;gap:4px}
+ .hint{font-size:14px}
+ .post{background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:30px}
+ .post.open{display:flex}
+ .pin{max-width:none;width:auto;height:min(88vh,1000px);display:grid;grid-template-columns:auto 400px;grid-template-rows:auto 1fr auto auto;background:#fff;border-radius:6px;overflow:hidden}
+ .ph{grid-column:2;grid-row:1;position:static}
+ .media{grid-column:1;grid-row:1/5;height:min(88vh,1000px);aspect-ratio:3/4}
+ .car{height:100%;aspect-ratio:auto}
+ .cap{grid-column:2;grid-row:2;overflow-y:auto;padding:16px 18px;font-size:14.5px}
+ .dots{grid-column:2;grid-row:3;justify-content:flex-start;padding:10px 18px 0}
+ .acts{grid-column:2;grid-row:4;padding:10px 18px 18px;border-top:1px solid #efefef}
+ .nav{display:block!important;width:36px;height:36px;font-size:20px}
+ .x{position:fixed;right:26px;top:14px;color:#fff;font-size:40px}
+}
+
+.sec{margin:26px 0 0}.sec h2{font-size:15px;margin:0 0 10px;letter-spacing:-.01em}
+.wide{display:block;width:100%;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.12)}
+.ct{width:100%;border-collapse:collapse;font-size:13px;line-height:1.5}.ct th,.ct td{border-top:1px solid #e6e6ea;padding:8px 6px;text-align:left;vertical-align:top}
+.ct th{white-space:nowrap;color:#666;font-weight:600;width:64px}.ct small{display:block;color:#888}
+.badge{display:inline-block;font-size:11px;padding:3px 9px;border-radius:99px;background:#111;color:#fff;margin-left:6px;vertical-align:2px}
+.dl a{display:inline-block;margin:0 8px 8px 0;font-size:12px;padding:7px 12px;border:1px solid #ddd;border-radius:8px;color:#111;text-decoration:none}
+.note{font-size:12px;color:#777;line-height:1.6;margin-top:10px}
+.media img.one{width:100%;height:100%;object-fit:contain;background:#000}
+</style></head>
+<body><div class="wrap">
+<div class="rep"><h1>겨울 이벤트 · 12/3 카드뉴스 썸네일 A/B 비교</h1><p>12월 1일에 시작하는 겨울 이벤트(12.01–02.28)를 소개하는 카드뉴스 썸네일입니다. 1차 시안은 11/19 올블랙 리프팅과 서체가 같아 폐기했고, 병호님이 주신 레퍼런스 두 장으로 다시 만들었습니다. A안 '겨울 노선 개통'은 레퍼런스 1(몽환 파스텔), B안 '겨울 신메뉴 출시'는 레퍼런스 2(채팅 말풍선) 스타일입니다. 두 안 모두 모델16을 썼고, 장비는 12월 이벤트 보드의 실제 사진입니다. 금액·할인율은 넣지 않았습니다. 한 안을 고르시면 그 안으로 본문 모션을 제작합니다.</p></div>
+<div class="sec" style="margin-top:14px"><h2>두 안 나란히 (프로필 그리드 3:4)</h2><img class="wide" src="https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/compare_profile_AB.jpg" alt="A안 B안 비교"></div>
+<div class="tabs" id="tabs" style="margin-top:22px"></div>
+<div class="prof"><div class="av"><div>BB</div></div><div><div class="un" id="un"></div><div class="st"><div><b>3</b> 게시물</div><div><b>겨울</b> 이벤트</div></div></div></div>
+<div class="bio"><b>뷰티블라썸의원 · Beauty Blossom Clinic</b><br><span id="bl"></span></div>
+<div class="gtabs"><div class="on">▦ 게시물</div><div>▶ 릴스</div><div>☺ 태그됨</div></div>
+<div class="grid" id="grid"></div>
+<div class="hint">왼쪽부터 1세트 · 2세트 · 3세트 (업로드는 3 → 2 → 1 순서) · 프로필에서는 3:4로 잘려 보입니다</div>
+<div class="sec"><h2>한 장으로 이어진 그리드 (3240×1350)</h2><a id="gl" target="_blank" rel="noopener"><img class="wide" id="gimg" alt="그리드 전체"></a></div>
+<div class="sec"><h2>문구 <span class="badge" id="stt"></span></h2><table class="ct" id="ct"></table>
+<div class="note">[ ] 안은 강조 글자(핑크)입니다. 서체는 11/19와 겹치지 않게 모두 바꿨습니다: A안 개구(Gaegu)·나눔손글씨 펜·Playfair Display·나눔고딕, B안 Poppins·나눔고딕·고운돋움. 세트 구성: 1세트 리프팅(울쎄라피 프라임·온다·세르프·소프웨이브·올리지오 XM·NAMICA) · 2세트 주사(페이스 보톡스·리쥬란&스킨부스터·콜라겐 볼륨·필러 2주년) · 3세트 스킨·바디(첫방문&체험가·해피아워·포텐자 에디션·색소 레이저·스킨케어·바디).</div></div>
+<div class="sec dl"><h2>원본 받기 (PNG)</h2><div id="dl"></div></div>
+</div>
+<div class="post" id="post"><div class="pin">
+ <div class="ph"><div class="sav">BB</div><div><b id="pu"></b><small id="pt"></small></div><button class="x" id="x" aria-label="닫기">×</button></div>
+ <div class="media"><div class="car" id="car"></div><button class="nav l" id="pl">‹</button><button class="nav r" id="pr">›</button></div>
+ <div class="acts">♡ &nbsp;💬 &nbsp;➤</div>
+ <div class="cap" id="cap"></div>
+</div></div>
+<script>
+var D=[{"code": "A", "label": "A안 · 겨울 노선 개통", "acct": "beautyblossom_clinic", "status": "비교 시안 v2", "tt": ["1세트 · 리프팅선", "2세트 · 주사선", "3세트 · 스킨·바디선"], "tiles": ["https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/A/A_set1.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/A/A_set2.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/A/A_set3.jpg"], "pngs": ["https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/A/WinterEvent_v2_A_set1.png", "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/A/WinterEvent_v2_A_set2.png", "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/A/WinterEvent_v2_A_set3.png"], "grid": "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/A/A_grid.jpg", "gridpng": "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/A/WinterEvent_v2_A_grid.png", "rows": [["스티커 Winter Line · 12.01 – 02.28", "뷰티블라썸 / 겨울 노선 [개통]", "12월 1일, 세 노선 동시 출발! · 노선 표시: 리프팅선 · 주사선 · 스킨·바디선"], ["Next Stop", "내리실 곳은 / [내 고민] 쪽입니다", "카메라 뷰파인더(얼굴 초점 상자, 셔터 = 주사선 정거장). 지하철 안내방송 \"내리실 문은 오른쪽입니다\"를 비튼 문구"], ["스티커 First Train", "처음이시면 / [첫차]부터!", "인생네컷 사진: 포텐자 · 피코슈어 · 아쿠아필 · 온다(이벤트 보드 실제 사진). 첫방문 이벤트 = 첫차"]]}, {"code": "B", "label": "B안 · 겨울 신메뉴 출시", "acct": "beautyblossom_clinic", "status": "비교 시안 v2", "tt": ["1세트 · 리프팅", "2세트 · 주사", "3세트 · 스킨·바디"], "tiles": ["https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/B/B_set1.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/B/B_set2.jpg", "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/B/B_set3.jpg"], "pngs": ["https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/B/WinterEvent_v2_B_set1.png", "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/B/WinterEvent_v2_B_set2.png", "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/B/WinterEvent_v2_B_set3.png"], "grid": "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/B/B_grid.jpg", "gridpng": "https://cdn.beautyblossomth.kr/beautyblossom/winter-event-2026-12/thumb-v2/B/WinterEvent_v2_B_grid.png", "rows": [["WINTER · 뷰티블라썸 겨울 신메뉴 :", "12월 1일, / 겨울 신메뉴 [출시]했어요!", "오늘의 추천은요? → 뷰마카세 · 필러맛집 / 환상의 짝꿍까지 12:01"], ["Chef's Pick", "주사도 [맛집]이 있어요", "이벤트 이름 '필러맛집'에서"], ["MENU · 스킨·바디 세트 메뉴 :", "피부 관리도 / [세트]로 드릴까요?", "네! 세트로 주세요 12:01 · 사진 카드: 포텐자 · 피코슈어(이벤트 보드 실제 사진)"]]}];
+var cur=0,pi=0;
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function tabs(){var h='';D.forEach(function(d,i){h+='<button class="'+(i==cur?'on':'')+'" data-i="'+i+'">'+d.label+'</button>'});$('tabs').innerHTML=h;[].forEach.call($('tabs').children,function(b){b.onclick=function(){cur=+b.dataset.i;render()}})}
+function render(){tabs();var d=D[cur];$('un').textContent=d.acct;$('bl').textContent=d.label;
+var h='';d.tiles.forEach(function(s,i){h+='<div class="tile" data-i="'+i+'"><img src="'+s+'" alt="'+d.tt[i]+'" loading="lazy"></div>'});$('grid').innerHTML=h;[].forEach.call($('grid').children,function(t){t.onclick=function(){open(+t.dataset.i)}});
+$('gimg').src=d.grid;$('gl').href=d.gridpng;$('stt').textContent=d.status;$('stt').className='badge';
+var t='';d.rows.forEach(function(r,i){t+='<tr><th>'+esc(d.tt[i])+'</th><td><small>'+esc(r[0])+'</small><b>'+esc(r[1])+'</b>'+(r[2]?'<br>'+esc(r[2]):'')+'</td></tr>'});$('ct').innerHTML=t;
+var g='<a href="'+d.gridpng+'">그리드 전체</a>';d.pngs.forEach(function(p,i){g+='<a href="'+p+'">'+(i+1)+'세트 썸네일</a>'});$('dl').innerHTML=g}
+function open(i){pi=i;var d=D[cur];$('pu').textContent=d.acct;$('pt').textContent=d.label+' · '+d.tt[i];$('car').innerHTML='<img class="one" src="'+d.tiles[i]+'" alt="">';var r=d.rows[i];$('cap').innerHTML='<b>'+esc(d.acct)+'</b> '+esc(r[1]);$('post').classList.add('open');document.body.style.overflow='hidden'}
+function close(){$('car').innerHTML='';$('post').classList.remove('open');document.body.style.overflow=''}
+$('pl').onclick=function(){open((pi+2)%3)};$('pr').onclick=function(){open((pi+1)%3)};
+$('x').onclick=close;$('post').addEventListener('click',function(e){if(e.target===this)close()});document.addEventListener('keydown',function(e){if(!$('post').classList.contains('open'))return;if(e.key=='Escape')close();if(e.key=='ArrowRight')$('pr').click();if(e.key=='ArrowLeft')$('pl').click()});
+render();
+</script></body></html>
